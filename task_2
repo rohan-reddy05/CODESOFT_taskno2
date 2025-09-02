@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IronCore Fitness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      section {
+        position: relative;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1s ease-out;
+      }
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.25;
+        z-index: 0;
+      }
+      #hero::before {
+        background-image: url("https://images.pexels.com/photos/3838389/pexels-photo-3838389.jpeg");
+      }
+      #packages::before {
+        background-image: url("https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg");
+      }
+      #shop::before {
+        background-image: url("https://images.pexels.com/photos/1552103/pexels-photo-1552103.jpeg");
+      }
+      #trainers::before {
+        background-image: url("https://images.pexels.com/photos/4761780/pexels-photo-4761780.jpeg");
+      }
+      #contact::before {
+        background-image: url("https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg");
+      }
+    </style>
+  </head>
+  <body class="bg-gray-950 text-white font-sans">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-black bg-opacity-70 backdrop-blur-md z-50 shadow-lg"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-yellow-400">IronCore Fitness</h1>
+        <ul class="flex space-x-6 text-lg">
+          <li>
+            <a href="#hero" class="hover:text-yellow-400 transition">Home</a>
+          </li>
+          <li>
+            <a href="#packages" class="hover:text-yellow-400 transition"
+              >Packages</a
+            >
+          </li>
+          <li>
+            <a href="#shop" class="hover:text-yellow-400 transition">Shop</a>
+          </li>
+          <li>
+            <a href="#trainers" class="hover:text-yellow-400 transition"
+              >Trainers</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-yellow-400 transition"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="h-screen flex items-center justify-center relative text-center visible"
+    >
+      <div class="z-10">
+        <h1
+          class="text-5xl md:text-6xl font-extrabold text-yellow-400 mb-6 animate-bounce"
+        >
+          Welcome to IronCore Fitness
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-200 mb-8">
+          Strength. Endurance. Transformation.
+        </p>
+        <a
+          href="#packages"
+          class="px-8 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-300 transition"
+          >Join Now</a
+        >
+      </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-20 relative">
+      <div class="relative z-10 max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-yellow-400 mb-12">
+          Membership Packages
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-gray-900 bg-opacity-90 p-6 rounded-2xl shadow-lg hover:scale-105 transform transition"
+          >
+            <h3 class="text-2xl font-bold mb-4">1 Month</h3>
+            <p class="text-3xl font-bold text-yellow-400 mb-4">₹1999</p>
+            <p>Access to all gym facilities</p>
+          </div>
+
+          <div
+            class="bg-gray-900 bg-opacity-90 p-6 rounded-2xl shadow-lg hover:scale-105 transform transition"
+          >
+            <h3 class="text-2xl font-bold mb-4">3 Months</h3>
+            <p class="text-3xl font-bold text-yellow-400 mb-4">₹5499</p>
+            <p>Access anywhere in the city</p>
+          </div>
+
+          <div
+            class="bg-gray-900 bg-opacity-90 p-6 rounded-2xl shadow-lg hover:scale-105 transform transition"
+          >
+            <h3 class="text-2xl font-bold mb-4">6 Months</h3>
+            <p class="text-3xl font-bold text-yellow-400 mb-4">₹10500</p>
+            <p>Includes diet consultations</p>
+          </div>
+
+          <div
+            class="bg-gray-900 bg-opacity-90 p-6 rounded-2xl shadow-lg hover:scale-105 transform transition"
+          >
+            <h3 class="text-2xl font-bold mb-4">12 Months</h3>
+            <p class="text-3xl font-bold text-yellow-400 mb-4">₹19000</p>
+            <p>Full access + Personal training</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="py-20 relative">
+      <div class="relative z-10 max-w-7xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-yellow-400 mb-12">
+          Shop Accessories
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Jacket -->
+          <div
+            class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition"
+          >
+            <img
+              src="https://images.pexels.com/photos/6311562/pexels-photo-6311562.jpeg"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-bold">Gym Jacket</h3>
+            <p class="text-yellow-400 font-semibold">₹1499</p>
+          </div>
+
+          <!-- Resistance Bands -->
+          <div
+            class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition"
+          >
+            <img
+              src="https://images.pexels.com/photos/6303497/pexels-photo-6303497.jpeg"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-bold">Resistance Bands</h3>
+            <p class="text-yellow-400 font-semibold">₹799</p>
+          </div>
+
+          <!-- Yoga Mat -->
+          <div
+            class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition"
+          >
+            <img
+              src="https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-bold">Yoga Mat</h3>
+            <p class="text-yellow-400 font-semibold">₹999</p>
+          </div>
+
+          <!-- Dumbbells -->
+          <div
+            class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition"
+          >
+            <img
+              src="https://images.pexels.com/photos/16513600/pexels-photo-16513600.jpeg"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-bold">Dumbbells (1kg-15kg)</h3>
+            <p class="text-yellow-400 font-semibold">₹499 - ₹3499</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="py-20 relative">
+      <div class="relative z-10 max-w-7xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-yellow-400 mb-12">
+          Meet Our Trainers
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Male Trainer -->
+          <div
+            class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition"
+          >
+            <img
+              src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg"
+              class="w-full h-56 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold">Rohit Kotari</h3>
+            <p class="text-gray-400">Strength Coach</p>
+          </div>
+
+          <!-- Male Trainer -->
+          <div
+            class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition"
+          >
+            <img
+              src="https://images.pexels.com/photos/1552108/pexels-photo-1552108.jpeg"
+              class="w-full h-56 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold">Vaishnavi Varma</h3>
+            <p class="text-gray-400">CrossFit Specialist</p>
+          </div>
+
+          <!-- Male Trainer -->
+          <div
+            class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition"
+          >
+            <img
+              src="https://images.pexels.com/photos/3289711/pexels-photo-3289711.jpeg"
+              class="w-full h-56 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold">Arjun Sarkar</h3>
+            <p class="text-gray-400">Bodybuilding Expert</p>
+          </div>
+
+          <!-- Female Trainer -->
+          <div
+            class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition"
+          >
+            <img
+              src="https://images.pexels.com/photos/2247179/pexels-photo-2247179.jpeg"
+              class="w-full h-56 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold">Priyanka Reddy</h3>
+            <p class="text-gray-400">Yoga & Fitness Trainer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative">
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-yellow-400 mb-8">Contact Us</h2>
+        <p class="text-lg mb-4">📍 Main Branch: Hitech City</p>
+        <p class="text-lg mb-4">📞 1234567890</p>
+        <p class="text-lg mb-4">📧 ironcore.fitness@gmail.com</p>
+        <p class="text-sm text-gray-400 mt-8">
+          © 2025 IronCore Fitness. All Rights Reserved.
+        </p>
+      </div>
+    </section>
+
+    <!-- Animation Script -->
+    <script>
+      const sections = document.querySelectorAll("section");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      sections.forEach((section) => {
+        if (!section.classList.contains("visible")) {
+          observer.observe(section);
+        }
+      });
+    </script>
+  </body>
+</html>
